@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  padding-top: 60px;
+  padding-bottom: 50px;
   font-family: Arial, sans-serif;
   background-color: #ddceb7;
 }
@@ -7,6 +9,10 @@ body {
 nav {
   display: flex;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
   background-color: #81663e;
   padding: 10px 20px;
 }
@@ -62,6 +68,15 @@ main#content p {
     margin: 0 auto; /* center paragraph */
 }
 
+main h1 {
+  padding: 10px 20px;   
+  font-size: 18px;
+}
+
+main h3 {
+  color: #d79330;
+}
+
 .fun-fact-box {
     background-color: #e9e2d9;
     border-left: 5px solid #d79330;
@@ -78,6 +93,47 @@ main#content p {
     color: #d79330;
     display: flex;
     align-items: center;
+}
+
+/* Make images responsive */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Content box style */
+.content-box {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Tips grid layout */
+.tips-container {
+  margin: 20px;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.tip-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.tip-box:hover {
+  transform: translateY(-5px);
 }
 
 footer {
