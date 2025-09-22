@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const logo = document.querySelector("nav img");
   if (logo) {
     logo.addEventListener("click", () => {
-      window.location.href = "home.html";
+      window.location.href = "index.html";
     });
   }
 });
