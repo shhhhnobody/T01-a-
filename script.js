@@ -1,13 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const currentPage = document.title.toLowerCase().replace(" ", "");
+  let currentPage = document.title.toLowerCase().replace(" ", "");
   const links = document.querySelectorAll("nav ul li a");
-  const pageTitle = document.getElementById("page-title");
+
+  // if the file is index.html, treat it as "home"
+  if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
+    currentPage = "index";
+  }
 
   links.forEach(link => {
     // highlight active menu link
     if (link.dataset.page === currentPage) {
       link.classList.add("active");
-    }
+    } 
 
     // swap pages
     link.addEventListener("click", (event) => {
